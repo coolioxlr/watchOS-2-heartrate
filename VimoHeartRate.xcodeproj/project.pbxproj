@@ -12,7 +12,58 @@
 		AA192F761B3C8F3F00A2FB8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA192F741B3C8F3F00A2FB8C /* Main.storyboard */; };
 		AA192F781B3C8F3F00A2FB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA192F771B3C8F3F00A2FB8C /* Assets.xcassets */; };
 		AA192F7B1B3C8F3F00A2FB8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA192F791B3C8F3F00A2FB8C /* LaunchScreen.storyboard */; };
+		AA192F881B3C8FF100A2FB8C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA192F861B3C8FF100A2FB8C /* Interface.storyboard */; };
+		AA192F8A1B3C8FF100A2FB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA192F891B3C8FF100A2FB8C /* Assets.xcassets */; };
+		AA192F911B3C8FF100A2FB8C /* VimoHeartRate WatchKit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AA192F901B3C8FF100A2FB8C /* VimoHeartRate WatchKit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AA192F961B3C8FF100A2FB8C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA192F951B3C8FF100A2FB8C /* InterfaceController.swift */; };
+		AA192F981B3C8FF100A2FB8C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA192F971B3C8FF100A2FB8C /* ExtensionDelegate.swift */; };
+		AA192F9A1B3C8FF100A2FB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA192F991B3C8FF100A2FB8C /* Assets.xcassets */; };
+		AA192F9E1B3C8FF100A2FB8C /* VimoHeartRate WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AA192F841B3C8FF100A2FB8C /* VimoHeartRate WatchKit App.app */; };
+		AA192FA81B3C903200A2FB8C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA192FA71B3C903200A2FB8C /* HealthKit.framework */; };
+		AA192FAE1B3CA06100A2FB8C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA192FAD1B3CA06100A2FB8C /* HealthKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA192F921B3C8FF100A2FB8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA192F651B3C8F3F00A2FB8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA192F8F1B3C8FF100A2FB8C;
+			remoteInfo = "VimoHeartRate WatchKit App Extension";
+		};
+		AA192F9C1B3C8FF100A2FB8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA192F651B3C8F3F00A2FB8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA192F831B3C8FF100A2FB8C;
+			remoteInfo = "VimoHeartRate WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA192FA21B3C8FF100A2FB8C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AA192F911B3C8FF100A2FB8C /* VimoHeartRate WatchKit App Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA192FA61B3C8FF100A2FB8C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				AA192F9E1B3C8FF100A2FB8C /* VimoHeartRate WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AA192F6D1B3C8F3F00A2FB8C /* VimoHeartRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VimoHeartRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +73,19 @@
 		AA192F771B3C8F3F00A2FB8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA192F7A1B3C8F3F00A2FB8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA192F7C1B3C8F3F00A2FB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA192F841B3C8FF100A2FB8C /* VimoHeartRate WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VimoHeartRate WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA192F871B3C8FF100A2FB8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		AA192F891B3C8FF100A2FB8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA192F8B1B3C8FF100A2FB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA192F901B3C8FF100A2FB8C /* VimoHeartRate WatchKit App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "VimoHeartRate WatchKit App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA192F951B3C8FF100A2FB8C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		AA192F971B3C8FF100A2FB8C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		AA192F991B3C8FF100A2FB8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA192F9B1B3C8FF100A2FB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA192FA71B3C903200A2FB8C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		AA192FA91B3C903200A2FB8C /* VimoHeartRate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VimoHeartRate.entitlements; sourceTree = "<group>"; };
+		AA192FAD1B3CA06100A2FB8C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		AA192FAF1B3CA06100A2FB8C /* VimoHeartRate WatchKit App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VimoHeartRate WatchKit App Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +93,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA192FA81B3C903200A2FB8C /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA192F8D1B3C8FF100A2FB8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA192FAE1B3CA06100A2FB8C /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,7 +111,11 @@
 		AA192F641B3C8F3F00A2FB8C = {
 			isa = PBXGroup;
 			children = (
+				AA192FAD1B3CA06100A2FB8C /* HealthKit.framework */,
+				AA192FA71B3C903200A2FB8C /* HealthKit.framework */,
 				AA192F6F1B3C8F3F00A2FB8C /* VimoHeartRate */,
+				AA192F851B3C8FF100A2FB8C /* VimoHeartRate WatchKit App */,
+				AA192F941B3C8FF100A2FB8C /* VimoHeartRate WatchKit App Extension */,
 				AA192F6E1B3C8F3F00A2FB8C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				AA192F6D1B3C8F3F00A2FB8C /* VimoHeartRate.app */,
+				AA192F841B3C8FF100A2FB8C /* VimoHeartRate WatchKit App.app */,
+				AA192F901B3C8FF100A2FB8C /* VimoHeartRate WatchKit App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +133,7 @@
 		AA192F6F1B3C8F3F00A2FB8C /* VimoHeartRate */ = {
 			isa = PBXGroup;
 			children = (
+				AA192FA91B3C903200A2FB8C /* VimoHeartRate.entitlements */,
 				AA192F701B3C8F3F00A2FB8C /* AppDelegate.swift */,
 				AA192F721B3C8F3F00A2FB8C /* ViewController.swift */,
 				AA192F741B3C8F3F00A2FB8C /* Main.storyboard */,
@@ -62,6 +142,28 @@
 				AA192F7C1B3C8F3F00A2FB8C /* Info.plist */,
 			);
 			path = VimoHeartRate;
+			sourceTree = "<group>";
+		};
+		AA192F851B3C8FF100A2FB8C /* VimoHeartRate WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				AA192F861B3C8FF100A2FB8C /* Interface.storyboard */,
+				AA192F891B3C8FF100A2FB8C /* Assets.xcassets */,
+				AA192F8B1B3C8FF100A2FB8C /* Info.plist */,
+			);
+			path = "VimoHeartRate WatchKit App";
+			sourceTree = "<group>";
+		};
+		AA192F941B3C8FF100A2FB8C /* VimoHeartRate WatchKit App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AA192FAF1B3CA06100A2FB8C /* VimoHeartRate WatchKit App Extension.entitlements */,
+				AA192F951B3C8FF100A2FB8C /* InterfaceController.swift */,
+				AA192F971B3C8FF100A2FB8C /* ExtensionDelegate.swift */,
+				AA192F991B3C8FF100A2FB8C /* Assets.xcassets */,
+				AA192F9B1B3C8FF100A2FB8C /* Info.plist */,
+			);
+			path = "VimoHeartRate WatchKit App Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +176,51 @@
 				AA192F691B3C8F3F00A2FB8C /* Sources */,
 				AA192F6A1B3C8F3F00A2FB8C /* Frameworks */,
 				AA192F6B1B3C8F3F00A2FB8C /* Resources */,
+				AA192FA61B3C8FF100A2FB8C /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AA192F9D1B3C8FF100A2FB8C /* PBXTargetDependency */,
 			);
 			name = VimoHeartRate;
 			productName = VimoHeartRate;
 			productReference = AA192F6D1B3C8F3F00A2FB8C /* VimoHeartRate.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AA192F831B3C8FF100A2FB8C /* VimoHeartRate WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA192FA31B3C8FF100A2FB8C /* Build configuration list for PBXNativeTarget "VimoHeartRate WatchKit App" */;
+			buildPhases = (
+				AA192F821B3C8FF100A2FB8C /* Resources */,
+				AA192FA21B3C8FF100A2FB8C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA192F931B3C8FF100A2FB8C /* PBXTargetDependency */,
+			);
+			name = "VimoHeartRate WatchKit App";
+			productName = "VimoHeartRate WatchKit App";
+			productReference = AA192F841B3C8FF100A2FB8C /* VimoHeartRate WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		AA192F8F1B3C8FF100A2FB8C /* VimoHeartRate WatchKit App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA192F9F1B3C8FF100A2FB8C /* Build configuration list for PBXNativeTarget "VimoHeartRate WatchKit App Extension" */;
+			buildPhases = (
+				AA192F8C1B3C8FF100A2FB8C /* Sources */,
+				AA192F8D1B3C8FF100A2FB8C /* Frameworks */,
+				AA192F8E1B3C8FF100A2FB8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VimoHeartRate WatchKit App Extension";
+			productName = "VimoHeartRate WatchKit App Extension";
+			productReference = AA192F901B3C8FF100A2FB8C /* VimoHeartRate WatchKit App Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +233,24 @@
 				TargetAttributes = {
 					AA192F6C1B3C8F3F00A2FB8C = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 96XG5CYU7R;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+					AA192F831B3C8FF100A2FB8C = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					AA192F8F1B3C8FF100A2FB8C = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 96XG5CYU7R;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -112,6 +268,8 @@
 			projectRoot = "";
 			targets = (
 				AA192F6C1B3C8F3F00A2FB8C /* VimoHeartRate */,
+				AA192F831B3C8FF100A2FB8C /* VimoHeartRate WatchKit App */,
+				AA192F8F1B3C8FF100A2FB8C /* VimoHeartRate WatchKit App Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +285,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA192F821B3C8FF100A2FB8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA192F8A1B3C8FF100A2FB8C /* Assets.xcassets in Resources */,
+				AA192F881B3C8FF100A2FB8C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA192F8E1B3C8FF100A2FB8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA192F9A1B3C8FF100A2FB8C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,7 +314,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA192F8C1B3C8FF100A2FB8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA192F981B3C8FF100A2FB8C /* ExtensionDelegate.swift in Sources */,
+				AA192F961B3C8FF100A2FB8C /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA192F931B3C8FF100A2FB8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA192F8F1B3C8FF100A2FB8C /* VimoHeartRate WatchKit App Extension */;
+			targetProxy = AA192F921B3C8FF100A2FB8C /* PBXContainerItemProxy */;
+		};
+		AA192F9D1B3C8FF100A2FB8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA192F831B3C8FF100A2FB8C /* VimoHeartRate WatchKit App */;
+			targetProxy = AA192F9C1B3C8FF100A2FB8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AA192F741B3C8F3F00A2FB8C /* Main.storyboard */ = {
@@ -156,6 +353,14 @@
 				AA192F7A1B3C8F3F00A2FB8C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AA192F861B3C8FF100A2FB8C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA192F871B3C8FF100A2FB8C /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -246,10 +451,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VimoHeartRate/VimoHeartRate.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VimoHeartRate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vimofit.VimoHeartRate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -257,10 +466,84 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VimoHeartRate/VimoHeartRate.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VimoHeartRate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vimofit.VimoHeartRate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		AA192FA01B3C8FF100A2FB8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "VimoHeartRate WatchKit App Extension/VimoHeartRate WatchKit App Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "VimoHeartRate WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vimofit.VimoHeartRate.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		AA192FA11B3C8FF100A2FB8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "VimoHeartRate WatchKit App Extension/VimoHeartRate WatchKit App Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "VimoHeartRate WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vimofit.VimoHeartRate.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		AA192FA41B3C8FF100A2FB8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = VimoHeartRate_WatchKit_App_Extension;
+				INFOPLIST_FILE = "VimoHeartRate WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vimofit.VimoHeartRate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		AA192FA51B3C8FF100A2FB8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = VimoHeartRate_WatchKit_App_Extension;
+				INFOPLIST_FILE = "VimoHeartRate WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vimofit.VimoHeartRate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -283,6 +566,25 @@
 				AA192F811B3C8F3F00A2FB8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA192F9F1B3C8FF100A2FB8C /* Build configuration list for PBXNativeTarget "VimoHeartRate WatchKit App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA192FA01B3C8FF100A2FB8C /* Debug */,
+				AA192FA11B3C8FF100A2FB8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA192FA31B3C8FF100A2FB8C /* Build configuration list for PBXNativeTarget "VimoHeartRate WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA192FA41B3C8FF100A2FB8C /* Debug */,
+				AA192FA51B3C8FF100A2FB8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
