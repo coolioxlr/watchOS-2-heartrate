@@ -15,7 +15,7 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     
     @IBOutlet weak var label: WKInterfaceLabel!
     @IBOutlet weak var deviceLabel : WKInterfaceLabel!
-    //@IBOutlet weak var heart: WKInterfaceImage!
+    @IBOutlet weak var heart: WKInterfaceImage!
     
     
     let healthStore = HKHealthStore()
@@ -154,6 +154,7 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
             // retrieve source from sample
             let name = sample!.sourceRevision.source.name
             self.updateDeviceName(name)
+//            self.animateHeart()
             
         }
     }
@@ -164,24 +165,24 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
         
     }
     
-    //    func animateHeart() {
-    //
-    //        self.animateWithDuration(0.5) { () -> Void in
-    //            self.heart.setWidth(100)
-    //            self.heart.setHeight(160)
-    //        }
-    //
-    //        let when = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * double_t(NSEC_PER_SEC)))
-    //        let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-    //        dispatch_after(when, queue) { () -> Void in
-    //            dispatch_async(dispatch_get_main_queue(), {
-    //                self.animateWithDuration(0.5, animations: { () -> Void in
-    //                    self.heart.setWidth(50)
-    //                    self.heart.setHeight(80)
-    //                })
-    //            })
-    //        }
-    //    }
+    func animateHeart() {
+        
+        self.animateWithDuration(0.5) { () -> Void in
+            self.heart.setWidth(60)
+            self.heart.setHeight(90)
+        }
+        
+        let when = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * double_t(NSEC_PER_SEC)))
+        let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+        dispatch_after(when, queue) { () -> Void in
+            dispatch_async(dispatch_get_main_queue(), {
+                self.animateWithDuration(0.5, animations: { () -> Void in
+                    self.heart.setWidth(50)
+                    self.heart.setHeight(80)
+                })
+            })
+        }
+    }
     
 }
 

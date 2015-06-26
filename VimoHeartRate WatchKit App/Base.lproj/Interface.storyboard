@@ -41,6 +41,7 @@
                     </items>
                     <connections>
                         <outlet property="deviceLabel" destination="Iio-p5-mtX" id="rHL-uK-Bcd"/>
+                        <outlet property="heart" destination="Kno-zh-V7M" id="Trd-za-8M9"/>
                         <outlet property="label" destination="hxi-vl-AIJ" id="PRr-AV-DXj"/>
                     </connections>
                 </controller>
