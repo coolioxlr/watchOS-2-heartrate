@@ -29,7 +29,7 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     // the device sensor location returned from HealthKit
     let location = HKHeartRateSensorLocation.Other
     
-    var anchor = Int()
+    var anchor = 0
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -119,19 +119,21 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
         // adding prdicate will not work
         //let predicate = HKQuery.predicateForSamplesWithStartDate(workoutStartDate, endDate: nil, options: HKQueryOptions.None)
         
-        //        var anchorValue = Int(HKAnchoredObjectQueryNoAnchor)
-        //        if anchor != nil {
-        //            anchorValue = anchor!
-        //        }
+        var anchorValue = Int(HKAnchoredObjectQueryNoAnchor)
+        if anchor != 0 {
+            anchorValue = self.anchor
+        }
         
         let sampleType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)
         
-        let heartRateQuery = HKAnchoredObjectQuery(type: sampleType!, predicate: nil, anchor: 0, limit: 0) { (query, sampleObjects, deletedObjects, newAnchor, error) -> Void in
+        let heartRateQuery = HKAnchoredObjectQuery(type: sampleType!, predicate: nil, anchor: anchorValue, limit: 0) { (query, sampleObjects, deletedObjects, newAnchor, error) -> Void in
             
+            self.anchor = anchorValue
             self.updateHeartRate(sampleObjects)
         }
         
         heartRateQuery.updateHandler = {(query, samples, deleteObjects, newAnchor, error) -> Void in
+            self.anchor = newAnchor
             self.updateHeartRate(samples)
         }
         
@@ -154,7 +156,7 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
             // retrieve source from sample
             let name = sample!.sourceRevision.source.name
             self.updateDeviceName(name)
-//            self.animateHeart()
+            self.animateHeart()
             
         }
     }
@@ -166,7 +168,6 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     }
     
     func animateHeart() {
-        
         self.animateWithDuration(0.5) { () -> Void in
             self.heart.setWidth(60)
             self.heart.setHeight(90)
