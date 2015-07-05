@@ -20,7 +20,6 @@
 		AA192F9A1B3C8FF100A2FB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA192F991B3C8FF100A2FB8C /* Assets.xcassets */; };
 		AA192F9E1B3C8FF100A2FB8C /* VimoHeartRate WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AA192F841B3C8FF100A2FB8C /* VimoHeartRate WatchKit App.app */; };
 		AA192FA81B3C903200A2FB8C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA192FA71B3C903200A2FB8C /* HealthKit.framework */; };
-		AA192FAE1B3CA06100A2FB8C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA192FAD1B3CA06100A2FB8C /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,6 @@
 		AA192F9B1B3C8FF100A2FB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA192FA71B3C903200A2FB8C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		AA192FA91B3C903200A2FB8C /* VimoHeartRate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VimoHeartRate.entitlements; sourceTree = "<group>"; };
-		AA192FAD1B3CA06100A2FB8C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		AA192FAF1B3CA06100A2FB8C /* VimoHeartRate WatchKit App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VimoHeartRate WatchKit App Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA192FAE1B3CA06100A2FB8C /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +108,6 @@
 		AA192F641B3C8F3F00A2FB8C = {
 			isa = PBXGroup;
 			children = (
-				AA192FAD1B3CA06100A2FB8C /* HealthKit.framework */,
 				AA192FA71B3C903200A2FB8C /* HealthKit.framework */,
 				AA192F6F1B3C8F3F00A2FB8C /* VimoHeartRate */,
 				AA192F851B3C8FF100A2FB8C /* VimoHeartRate WatchKit App */,
