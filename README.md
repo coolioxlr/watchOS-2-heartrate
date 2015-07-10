@@ -15,3 +15,7 @@ Examples to show streaming heartrate from watch using Swift
 
 - Change the "Team" setting on [General] for each target.
 - Setup HealthKit for the WatchKit extension target.
+
+##watchOS Beta3 
+
+- Simulator now showing fake heartrate 
