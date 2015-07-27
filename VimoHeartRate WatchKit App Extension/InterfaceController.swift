@@ -89,11 +89,11 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     
     // MARK: - Actions
     @IBAction func startBtnTapped() {
-        healthStore.startWorkoutSession(workoutSession) { _ in }
+        healthStore.startWorkoutSession(workoutSession)
     }
     
     @IBAction func stopBtnTapped() {
-        healthStore.stopWorkoutSession(workoutSession) { _ in }
+        healthStore.endWorkoutSession(workoutSession)
     }
     
     func createHeartRateStreamingQuery(workoutStartDate: NSDate) -> HKQuery? {
@@ -124,12 +124,12 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
         guard let heartRateSamples = samples as? [HKQuantitySample] else {return}
         
         dispatch_async(dispatch_get_main_queue()) {
-            let sample = heartRateSamples.first
-            let value = sample!.quantity.doubleValueForUnit(self.heartRateUnit)
+            guard let sample = heartRateSamples.first else{return}
+            let value = sample.quantity.doubleValueForUnit(self.heartRateUnit)
             self.label.setText(String(UInt16(value)))
             
             // retrieve source from sample
-            let name = sample!.sourceRevision.source.name
+            let name = sample.sourceRevision.source.name
             self.updateDeviceName(name)
             self.animateHeart()
         }
