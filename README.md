@@ -18,4 +18,8 @@ Examples to show streaming heartrate from watch using Swift
 
 ##watchOS Beta3 
 
-- Simulator now showing fake heartrate 
+- Simulator now showing simulated heartrate 
+
+##watchOS Beta4
+
+- Updated with new APIs 
