@@ -22,7 +22,7 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     // define the activity type and location
     let workoutSession = HKWorkoutSession(activityType: HKWorkoutActivityType.CrossTraining, locationType: HKWorkoutSessionLocationType.Indoor)
     let heartRateUnit = HKUnit(fromString: "count/min")
-    var anchor = 0
+    var anchor = HKQueryAnchor(fromValue: Int(HKAnchoredObjectQueryNoAnchor))
     
     
     override func awakeWithContext(context: AnyObject?) {
@@ -100,21 +100,16 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
         // adding predicate will not work
         // let predicate = HKQuery.predicateForSamplesWithStartDate(workoutStartDate, endDate: nil, options: HKQueryOptions.None)
         
-        var anchorValue = Int(HKAnchoredObjectQueryNoAnchor)
-        if anchor != 0 {
-            anchorValue = anchor
-        }
-        
         guard let quantityType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate) else { return nil }
         
-        let heartRateQuery = HKAnchoredObjectQuery(type: quantityType, predicate: nil, anchor: anchorValue, limit: 0) { (query, sampleObjects, deletedObjects, newAnchor, error) -> Void in
-            
-            self.anchor = anchorValue
+        let heartRateQuery = HKAnchoredObjectQuery(type: quantityType, predicate: nil, anchor: anchor, limit: Int(HKObjectQueryNoLimit)) { (query, sampleObjects, deletedObjects, newAnchor, error) -> Void in
+            guard let newAnchor = newAnchor else {return} 
+            self.anchor = newAnchor
             self.updateHeartRate(sampleObjects)
         }
         
         heartRateQuery.updateHandler = {(query, samples, deleteObjects, newAnchor, error) -> Void in
-            self.anchor = newAnchor
+            self.anchor = newAnchor!
             self.updateHeartRate(samples)
         }
         return heartRateQuery
