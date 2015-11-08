@@ -16,8 +16,12 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     @IBOutlet private weak var label: WKInterfaceLabel!
     @IBOutlet private weak var deviceLabel : WKInterfaceLabel!
     @IBOutlet private weak var heart: WKInterfaceImage!
+    @IBOutlet private weak var startStopButton : WKInterfaceButton!
     
     let healthStore = HKHealthStore()
+    
+    //State of the app - is the workout activated
+    var workoutActive = false
     
     // define the activity type and location
     let workoutSession = HKWorkoutSession(activityType: HKWorkoutActivityType.CrossTraining, locationType: HKWorkoutSessionLocationType.Indoor)
@@ -89,11 +93,18 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     
     // MARK: - Actions
     @IBAction func startBtnTapped() {
-        healthStore.startWorkoutSession(workoutSession)
-    }
-    
-    @IBAction func stopBtnTapped() {
-        healthStore.endWorkoutSession(workoutSession)
+        if (self.workoutActive) {
+            //finish the current workout
+            self.workoutActive = false
+            self.startStopButton.setTitle("Start")
+            healthStore.endWorkoutSession(workoutSession)
+        } else {
+            //start a new workout
+            self.workoutActive = true
+            self.startStopButton.setTitle("Stop")
+            healthStore.startWorkoutSession(workoutSession)
+        }
+
     }
     
     func createHeartRateStreamingQuery(workoutStartDate: NSDate) -> HKQuery? {

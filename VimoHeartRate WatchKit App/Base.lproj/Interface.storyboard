@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.20" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Symbol.ttf">
@@ -33,16 +33,12 @@
                                 <action selector="startBtnTapped" destination="AgC-eL-Hgc" id="VIN-tV-rkh"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Stop" id="D7L-P7-yiJ">
-                            <connections>
-                                <action selector="stopBtnTapped" destination="AgC-eL-Hgc" id="HDo-tL-wgy"/>
-                            </connections>
-                        </button>
                     </items>
                     <connections>
                         <outlet property="deviceLabel" destination="Iio-p5-mtX" id="rHL-uK-Bcd"/>
                         <outlet property="heart" destination="Kno-zh-V7M" id="Trd-za-8M9"/>
                         <outlet property="label" destination="hxi-vl-AIJ" id="PRr-AV-DXj"/>
+                        <outlet property="startStopButton" destination="JvV-5H-a2z" id="DmP-mE-c0k"/>
                     </connections>
                 </controller>
             </objects>
