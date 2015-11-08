@@ -24,14 +24,13 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     var workoutActive = false
     
     // define the activity type and location
-    let workoutSession = HKWorkoutSession(activityType: HKWorkoutActivityType.CrossTraining, locationType: HKWorkoutSessionLocationType.Indoor)
+    var workoutSession : HKWorkoutSession?
     let heartRateUnit = HKUnit(fromString: "count/min")
     var anchor = HKQueryAnchor(fromValue: Int(HKAnchoredObjectQueryNoAnchor))
     
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        workoutSession.delegate = self
     }
     
     override func willActivate() {
@@ -72,6 +71,7 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     
     func workoutSession(workoutSession: HKWorkoutSession, didFailWithError error: NSError) {
         // Do nothing for now
+        NSLog("Workout error: \(error.userInfo)")
     }
     
     func workoutDidStart(date : NSDate) {
@@ -85,7 +85,7 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     func workoutDidEnd(date : NSDate) {
         if let query = createHeartRateStreamingQuery(date) {
             healthStore.stopQuery(query)
-            label.setText("Stop")
+            label.setText("---")
         } else {
             label.setText("cannot stop")
         }
@@ -97,14 +97,22 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
             //finish the current workout
             self.workoutActive = false
             self.startStopButton.setTitle("Start")
-            healthStore.endWorkoutSession(workoutSession)
+            if let workout = self.workoutSession {
+                healthStore.endWorkoutSession(workout)
+            }
         } else {
             //start a new workout
             self.workoutActive = true
             self.startStopButton.setTitle("Stop")
-            healthStore.startWorkoutSession(workoutSession)
+            startWorkout()
         }
 
+    }
+    
+    func startWorkout() {
+        self.workoutSession = HKWorkoutSession(activityType: HKWorkoutActivityType.CrossTraining, locationType: HKWorkoutSessionLocationType.Indoor)
+        self.workoutSession?.delegate = self
+        healthStore.startWorkoutSession(self.workoutSession!)
     }
     
     func createHeartRateStreamingQuery(workoutStartDate: NSDate) -> HKQuery? {
